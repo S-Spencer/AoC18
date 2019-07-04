@@ -15,7 +15,7 @@ elfB = 1
 
 while len(recipes) < 19:
     #The new recipie is found by summing the current recepie of each elf
-    new_recipe = recpies[elfA] + recipies[elfB]
+    new_recipe = recipes[elfA] + recipes[elfB]
     #The new recipe is added to the list, including a check to handle if it is double digits.
     if new_recipe > 9:
         recipes.append(1)
