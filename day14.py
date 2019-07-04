@@ -13,7 +13,7 @@ elfA = 0
 elfB = 1
 #Values to store the current recipe index of each elf
 
-while len(recipes) < 19:
+while len(recipes) < 890701:
     #The new recipie is found by summing the current recepie of each elf
     new_recipe = recipes[elfA] + recipes[elfB]
     #The new recipe is added to the list, including a check to handle if it is double digits.
@@ -27,5 +27,7 @@ while len(recipes) < 19:
     elfA = step(elfA,recipes)
     elfB = step(elfB,recipes)
 
-print(recipes[-10:])
+answer = 890691
+print(recipes[answer:answer+10])
 #Print final 10 values of recipes as required by the puzzle
+#Its done this way instead of recipe[-10:] as if two recipes are added in the final pass, it throws the final answer off by 1 place.
