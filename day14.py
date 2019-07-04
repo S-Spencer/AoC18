@@ -19,10 +19,10 @@ while len(recipes) < 19:
     #The new recipe is added to the list, including a check to handle if it is double digits.
     if new_recipe > 9:
         recipes.append(1)
-        recipes.append(new_recipes%10)
+        recipes.append(new_recipe%10)
         # The sum of two single digits is less than 20, so the first digit must be "1", and the second will be the remainder when its divided by 10
     else:
-        recipes.append(new_recipes)
+        recipes.append(new_recipe)
     #The new index for each elf is then found.
     elfA = step(elfA,recipes)
     elfB = step(elfB,recipes)
