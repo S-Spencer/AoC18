@@ -1,6 +1,6 @@
 def step(elf,list):
-    move = elf + list[elf] + 1
-    if move > len(list):
+    move = list[elf] + elf +1
+    if move >= len(list):
         move = move%len(list)
         return move
     else:
@@ -27,4 +27,5 @@ while len(recipes) < 19:
     elfA = step(elfA,recipes)
     elfB = step(elfB,recipes)
 
-print(recpies[-10:])
+print(recipes[-10:])
+#Print final 10 values of recipes as required by the puzzle
