@@ -15,12 +15,12 @@ score = [0]*players
 game = collections.deque([0])
 
 """
-Each marble, donated by a number between 1 and last_marble is added to game
+Each marble, denoted by a number between 1 and last_marble is added to game in order, one for each pass of the loop
 If the marble's number is not exactly divisible by 23, game is rotated by 2 spaces and the marble appended
 If the marble's number is exactly divisible by 23, the game is rotated by -7 spaces. The previous marble at that point is popped from game.
 Its value plus the value of the current marble is added to the score of the current player (found by the remainer of dividing the current marble's value by players)
 The answer for part one of the puzzle is found when m is equal to last_marble/100, and the highest score is output
-The answer for part two is the highest score once all marbles have been player, and is output 
+The answer for part two is the highest score once all marbles have been player, and is output
 """
 for m in range(1, last_marble + 1):
     if m % 23 == 0:

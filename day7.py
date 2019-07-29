@@ -1,9 +1,6 @@
-"""
-Read in input into two lists
-instructions stores two letters, of which the first step represented by the first letter must be completed befroe the second can be undertaken
-"""
+#Input stored in instructions as two letters, of which the first step represented by the first letter must be completed befroe the second can be undertaken
+
 instructions = []
-alpha = []
 raw = open("day7_input.txt","r")
 for line in raw:
     part1 = line[5]
@@ -12,7 +9,7 @@ for line in raw:
 raw.close()
 
 """
-Create a list of all possible instructions (ie every letter of the alphabet
+Create a list of all possible instructions (ie every letter of the alphabet)
 Each letter also store a time which corrisponds to how many seconds it takes to complete the task associated with the letter (sec)
 This calculated as 60 + (letter's position in alphabet) eg A = 60 + 1
 """
@@ -55,7 +52,7 @@ Loop coninues while there are still letters missing from answer1 ie. Number of l
 For each pass of the loop, the list next_step stores all possible actions that could be completed given ones already completed in answer1
 First any letters in start that are not in answer1 are added, as they have no pre-requisits
 Then any letter not in the answer1 and for which all of its prerequisits are completed are also added
-Next step is sorted so that letters are added to answer1 in the correct order
+next_step is sorted so that letters are added to answer1 in the correct order
 The first item not in answer1 is added to it, and the the loop is started over again
 """
 while len(answer1) < len(alpha):

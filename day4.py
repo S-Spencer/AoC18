@@ -3,7 +3,7 @@ Input is saved into a list of observations (obs)
 month, day, hour and minute denote their respective times of the observations
 status is set to one of three values:
     If a guard starts their shift, their ID number is saved
-    If a guard is wakes up, it is set as 0
+    If a guard wakes up, it is set as 0
     If a guard is asleep, it is set as 1
 This information is stored as a single sting in obs
 Once all input has been read into obs, it is sorted so that all observations about a single shift are together
@@ -27,10 +27,10 @@ raw.close()
 obs.sort()
 
 """
-Obsevations of the same watch are joined together into a single list
-Each entry in the list denotes one minute, and is set to either 0 (awake) or 1 (asleep)
+Obsevations of the same watch are joined together into a single list (watch)
+Each entry in watch denotes one minute, and is set to either 0 (awake) or 1 (asleep)
 The final entry in a list gives the ID number of the guard
-watches is a list to store each individual watches
+watches is a list to store each individual watch
 index gives the index for watches. It is set to -1 so it is properly set to 0 on the initial pass
 For each individual observation in obs:
     if the status is the ID number of a guard, this indicates a new watch has begun, and so a new watch is created. The guard is initially assumed to be awake (0) for the whole shift
@@ -108,7 +108,7 @@ sleep_max_time = sleep_freq.index(sleep_max)
 answer1 = int(sleep_max_id)*int(sleep_max_time)
 print("Part 1 answer: " + str(answer1))
 
-#As the second part of the task is likely to identify a differnet guard, appropriate values are reset to 0
+#As the second part of the task is likely to identify a differnet guard, appropriate values are reset to 0. sleep_max_time stoes the specific minute a guard is most frequently asleep
 sleep_max = 0
 sleep_max_time = 0
 sleep_max_ID = 0

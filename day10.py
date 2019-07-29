@@ -1,7 +1,7 @@
 """
 find_area finds the size of an area required to contain a group of co-ordinates
-It find the maximum and minimum values for x and y in the input co_ordinates
-The area is then found by multiplying the differencee in x with the difference in y
+It finds the maximum and minimum values for x and y in the input co_ordinates
+The area is then found by multiplying the difference in x with the difference in y
 """
 def find_area(co_ord):
    x_max = max(co_ord, key=lambda l: l[0])
@@ -31,7 +31,7 @@ raw.close()
 
 """
 area is the size of sky the lights are in
-end is a bolean to keep a loop repeating
+end is a set to keep a loop repeating until alignment occurs
 t is the number of ticks that have passed
 """
 area = find_area(lights)

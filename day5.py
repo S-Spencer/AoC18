@@ -17,7 +17,7 @@ place is used as a index of the current position in the string.
 finish is used to keep the code iterating over the string until it is complete. It is set to one once place is set to the index of the final character in the string
 Each character is checked against the next in the list to see if its the same letter but different case. If so, they are both deleted, and the place index is reduced to check if
 removing character creates a new match. Otherwise, place is incremented by one
-Then the length of the string is output. It is storred as shortest for use in part 2 of the task
+Then the length of the string is output. It is stored as shortest for use in part 2 of the task as the initial shortest possible string to beat
 """
 place = 0
 finish = 0

@@ -18,7 +18,7 @@ def power_level(x,y):
 power_total returns the sum of the power_levels of all cells in a square of dimensions d^2 of whith the top left corner is centred on (x,y)
 f is an input list of all fuel cells on the grid
 total is the running sum of all power_levels of cells in the square.
-All cells in the range (x to x+d, y to y+d) are check for their power level, which is summed and added to the total
+All cells in the range (x to x+d, y to y+d) are checked for their power level, which is summed and added to the total
 This is returned once all cells have been checked
 """
 def power_total(x,y,f,d):
@@ -56,7 +56,7 @@ max_power_3 = [0,0,0]
 
 """
 For every possible square length between 1 to 299 inclusive (300 already calculated fuel was generated), all squares total power level is found
-If it beats the previous max power level, the power level is stored in max_power, and the corresponding coordinates and square length are stored in max_power_xyd
+If it beats the previous max_power, the power_level is stored in max_power, and the corresponding coordinates and square length are stored in max_power_xyd
 An extra check is made for all squares side length of 3 to see which of those has the greatest power level so this can be stored and output for part 1
 """
 for d in range(1,300):

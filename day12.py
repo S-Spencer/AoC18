@@ -9,7 +9,7 @@ def rindex(lst,item):
             return len(lst) - i - 1
     return None
 
-#growth decides if a pot will contain a plant in the next generation given a string conaining the 2 pots to ether side of the one in question and a list of rules
+#growth decides if a pot will contain a plant in the next generation given a string conaining the 2 pots to ether side of the one in question and a list of rules (lst)
 def growth(string,lst):
     if string in lst:
         return "#"
@@ -52,7 +52,7 @@ Instead, presume that after a reasonable number (10000) that plant growth will h
 
 Have to add points either end of original input to check for possible changes.
 The most . before a # in either direction is 3, eg ...## and ##....
-Thus need to chect where first and last # occur, and add additional . to accountfor this
+Thus need to check where first and last # occur, and add additional . to accountfor this
 This is done using extra_negative and extra_positive, which are lists with enough "." in to place the first or last "#" with enough "." next to it to be significant
 negative_index is decreased by the number of "." in extra_negative
 past_gen is made by adding extra_negative and extra_poisitive to either side of the previous generation (pots[gen-1])
@@ -130,6 +130,4 @@ else:
     sys.exit("Convergence not reached! Increase number of generations.")
 c = final_check[4] - (m*10000)
 gen50b = (m*(5*(10**10))) + c
-print(m)
-print(c)
 print("Part 2 answer: " + str(gen50b))
